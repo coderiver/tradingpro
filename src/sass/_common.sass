@@ -46,12 +46,192 @@
 // 	+png(blabla)
 // p
 // 	+jpg(bla)
++font(Roboto-Regular, roboto-regular)
++font(Roboto-Medium, roboto-medium)
++font(Roboto-MediumItalic, roboto-medium-i)
++font(Roboto-Black, roboto-black)
++font(Roboto-BlackItalic, roboto-black-i)
++font(Roboto-Bold, roboto-bold)
++font(Roboto-BoldItalic, roboto-bold-i)
++font(Roboto-Italic, roboto-italic)
++font(Roboto-Light, roboto-light)
++font(Roboto-LightItalic, roboto-light-i)
++font(Roboto-Thin, roboto-thin)
++font(Roboto-ThinItalic, roboto-thin-i)
++font(robotocondensed-bold,robotocondensed-bold)
++font(Helvetica_Light-Normal,helveticaneuecyr-medium)
 
+=reg
+	font-family: "roboto-regular", Arial, sans-serif 
+=med
+	font-family: "roboto-medium", Arial, sans-serif
+=med-i
+	font-family: "roboto-medium-i", Arial, sans-serif 
+=black
+	font-family: "roboto-black", Arial, sans-serif 
+=black-i
+	font-family: "roboto-black-i", Arial, sans-serif
+=bold
+	font-family: "roboto-bold", Arial, sans-serif
+=bold-i
+	font-family: "roboto-bold-i", Arial, sans-serif 
+=it
+	font-family: "roboto-italic", Arial, sans-serif
+=light
+	font-family: "roboto-light", Arial, sans-serif
+=light-i
+	font-family: "roboto-light-i" , Arial, sans-serif 
+=thin
+	font-family: "roboto-thin", Arial, sans-serif
+=thin-i
+	font-family: "roboto-thin-i",   Arial, sans-serif
+=cbold
+	font-family: "robotocondensed-bold",   Arial, sans-serif 
 
+=arial
+	font-family:  Arial, sans-serif
+%gradient-line
+	background-image: linear-gradient(to right, #734c33 0%, #876242 20%, #e2c98f 50%, #a3875e 68%, #816344 70%, #634026 85%, #f5c955 100%)
+%gradient-line_op
+	background-image: linear-gradient(to right, rgba(#734c33, .5) 0%, rgba(#876242, .5) 20%, rgba(#e2c98f, .5) 50%, rgba(#a3875e, .5) 68%, rgba(#816344, .5) 70%, rgba(#634026, .5) 85%, rgba(#f5c955, .5) 100%)
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
+	font-family: 'Calibri Light'  
+	font-size: 14px
 	line-height: 1.4
 
-
+a
+	text-decoration: none
 // common blocks
+.container
+	max-width: 1200px
+	padding: 0 30px  
+	margin: 0 auto 
+	+clr
+.logo
+	+hide-text
+	+s(logo)
+	display: inline-block
+.title
+	color: #b3810a
+	font-size: 38px
+	font-weight: light
+	text-transform: uppercase
+	position: relative
+	display: inline-block
+	padding-bottom: 3px 
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 48%
+		margin-left: -40px 
+		width: 80px
+		height: 2px
+		background: #B3810A 
+.btn
+	padding: 14px 38px 8px 
+	border-radius: 5px
+	+black
+	font-size: 14px
+	line-height: 1
+	display: inline-block
+	border: 1px solid #cebe93
+	background: linear-gradient( to top, #c6bb9e 0%, #eee2c0 100%)
+	text-shadow: 0px 1px 0px rgba(255, 238, 186, 0.73)
+	color: #857f6e
+	text-transform: uppercase
+	box-shadow: 0px 2px 3px 0px #716e67, inset 0px 1px 0px 0px #faf2d2, inset 1px 0px 0px 0px #faf2d2
+	+tr(background .25s)
+	&:hover
+		background: linear-gradient( to top, darken(#c6bb9e, 5%) 0%, darken(#eee2c0, 5%) 100%)
+	&_lg
+		font-size: 18px 
+		padding: 16px 20px 14px 
+		text-align: center
+	&_yellow
+		border: 1px solid #ffed8c
+		border-right-color: transparent
+		border-bottom-color: transparent
+		border-radius: 3px
+		background: linear-gradient( to top, #ddb23e 0%, #f4c64c 100%)
+		box-shadow: 2px 2px 2px rgba(0,0,0, .8)
+		color: #4c2105
+		text-shadow: 1px 1px 1px rgba(255,255,255, .3)
+		&:hover
+			background: linear-gradient( to top, darken(#ddb23e, 5%) 0%, darken(#f4c64c, 5%) 100%)
+
+.btn-action
+	position: relative
+	padding: 14px 13px 8px 
+	border: 1px solid #f6e6b8
+	+black
+	color: #98917e
+	text-shadow: 0px 1px 0px rgba(255, 238, 186, 0.73)
+	display: inline-block
+	font-size: 14px 
+	border-radius: 5px 
+	background: linear-gradient( to top, #c7bc9f 0%, #eee1bf 100%)
+	box-shadow: 0px 2px 3px 0px #716e67,inset 0px 1px 0px 0px #fffdde, inset 1px 0px 0px 0px #fffdde
+	line-height: 1 
+	+tr(background .3s)
+	i
+		display: inline-block
+		vertical-align: middle
+		margin-right: 15px
+	&:hover
+		background: linear-gradient( to top, darken(#c7bc9f, 5%) 0%, darken(#eee1bf, 5%) 100%)
+
+.page-title
+	font-size: 78px
+	color: #6b482a
+	text-align: center
+	line-height: 1
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5)
+.nav
+	height: 60px
+	line-height: 60px
+	background: #936645  
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		bottom: 100%
+		left: 0
+		right: 0
+		height: 3px  
+		@extend %gradient-line_op
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 3px 
+		@extend %gradient-line
+
+	&__list
+		+justify
+		li
+			// margin-right: 30px 
+			font-size: 18px
+			line-height: 60px  
+			display: inline-block
+		a
+			color: #fff
+			font-size: 18px 
+			text-transform: uppercase
+			+tr(color .3s)
+			&:hover, &.is-active
+				color: #ffcd48
+			&.is-active
+				font-weight: bold 
+
+
+	
+
+
+			
+  
+
+
+

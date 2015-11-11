@@ -1,0 +1,26 @@
+.footer
+	background: #B3810A 
+	padding-top: 43px 
+	padding-bottom: 65px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		height: 3px 
+		@extend %gradient-line
+	&__item
+		float: left
+		p
+			color: #fff
+			font-size: 16px 
+			a
+				color: #fff
+				font-weight: bold 
+		&:first-child
+			width: 22% 
+		&:last-child
+			float: right
+		

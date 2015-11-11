@@ -1,6 +1,8 @@
 $icons: (0:0)
-$icons: map-merge($icons,(codedby: (X: 0px, Y:-9px, W: 47px, H: 5px, TW: 49px, TH: 14px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(coderiver: (X: 0px, Y:0px, W: 49px, H: 5px, TW: 49px, TH: 14px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(codedby: (X: -75px, Y:-51px, W: 47px, H: 5px, TW: 176px, TH: 73px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(coderiver: (X: -22px, Y:-51px, W: 49px, H: 5px, TW: 176px, TH: 73px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(logo: (X: 0px, Y:0px, W: 176px, H: 47px, TW: 176px, TH: 73px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(phone: (X: 0px, Y:-51px, W: 18px, H: 22px, TW: 176px, TH: 73px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -13,20 +15,51 @@ $icons: map-merge($icons,(coderiver: (X: 0px, Y:0px, W: 49px, H: 5px, TW: 49px, 
 	width: icon-attr($iconName, W)
 	height: icon-attr($iconName, H)
 	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
 
 @mixin s($i)
-	+sprite($i)
+	@include sprite($i)
+@mixin sp($i)
+	@include sprite-position($i)
+@mixin sr($i)
+	@include sprite-retina($i)	
 
 //
 //.icon-codedby
 //	width: 47px
 //	height: 5px
 //	background-image: url('../img/icons.png')
-//	background-position: 0px -9px
+//	background-position: -75px -51px
 //
 //.icon-coderiver
 //	width: 49px
 //	height: 5px
 //	background-image: url('../img/icons.png')
+//	background-position: -22px -51px
+//
+//.icon-logo
+//	width: 176px
+//	height: 47px
+//	background-image: url('../img/icons.png')
 //	background-position: 0px 0px
+//
+//.icon-phone
+//	width: 18px
+//	height: 22px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -51px
 //
