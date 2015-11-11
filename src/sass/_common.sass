@@ -111,14 +111,20 @@ a
 	+hide-text
 	+s(logo)
 	display: inline-block
+.title-wrap
+	position: relative
+	z-index: 1
+	overflow: hidden
+
 .title
 	color: #b3810a
-	font-size: 38px
-	font-weight: light
+	font-size: 36px
 	text-transform: uppercase
 	position: relative
 	display: inline-block
 	padding-bottom: 3px 
+	margin: 20px 0 
+	z-index: 2
 	&:after
 		content: ''
 		position: absolute
@@ -128,6 +134,31 @@ a
 		width: 80px
 		height: 2px
 		background: #B3810A 
+	&_left
+		&:after
+			left: 0
+			margin-left: 0
+	&_mod
+		span
+			background: #fff 
+			display: inline-block
+			position: relative
+			padding: 0 30px
+			margin-left: -30px 
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				margin-top: -2px
+				height: 4px
+				left: -1000px
+				right: -1000px 
+				z-index: -2 
+				@extend %gradient-line 
+			// &:before
+			// &:after
+
+
 .btn
 	padding: 14px 38px 8px 
 	border-radius: 5px
