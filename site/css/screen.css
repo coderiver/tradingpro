@@ -130,6 +130,7 @@ a { text-decoration: none; }
 .article { margin: 0 -30px; *zoom: 1; }
 .article:after { content: " "; display: table; clear: both; }
 .article__col { float: left; width: 50%; padding: 0 30px; }
+.article p { color: #4a2005; font-size: 20px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
