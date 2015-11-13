@@ -46,47 +46,16 @@
 // 	+png(blabla)
 // p
 // 	+jpg(bla)
-+font(Roboto-Regular, roboto-regular)
-+font(Roboto-Medium, roboto-medium)
-+font(Roboto-MediumItalic, roboto-medium-i)
-+font(Roboto-Black, roboto-black)
-+font(Roboto-BlackItalic, roboto-black-i)
-+font(Roboto-Bold, roboto-bold)
-+font(Roboto-BoldItalic, roboto-bold-i)
-+font(Roboto-Italic, roboto-italic)
-+font(Roboto-Light, roboto-light)
-+font(Roboto-LightItalic, roboto-light-i)
-+font(Roboto-Thin, roboto-thin)
-+font(Roboto-ThinItalic, roboto-thin-i)
-+font(robotocondensed-bold,robotocondensed-bold)
-+font(Helvetica_Light-Normal,helveticaneuecyr-medium)
 
-=reg
-	font-family: "roboto-regular", Arial, sans-serif 
-=med
-	font-family: "roboto-medium", Arial, sans-serif
-=med-i
-	font-family: "roboto-medium-i", Arial, sans-serif 
++font(roboto-black, roboto-black)
++font(calibril, calibri-light)
+
+=light
+	font-family: "calibri-light", Arial, sans-serif  
 =black
 	font-family: "roboto-black", Arial, sans-serif 
-=black-i
-	font-family: "roboto-black-i", Arial, sans-serif
-=bold
-	font-family: "roboto-bold", Arial, sans-serif
-=bold-i
-	font-family: "roboto-bold-i", Arial, sans-serif 
-=it
-	font-family: "roboto-italic", Arial, sans-serif
-=light
-	font-family: "roboto-light", Arial, sans-serif
-=light-i
-	font-family: "roboto-light-i" , Arial, sans-serif 
-=thin
-	font-family: "roboto-thin", Arial, sans-serif
-=thin-i
-	font-family: "roboto-thin-i",   Arial, sans-serif
-=cbold
-	font-family: "robotocondensed-bold",   Arial, sans-serif 
+	
+
 
 =arial
 	font-family:  Arial, sans-serif
@@ -95,7 +64,8 @@
 %gradient-line_op
 	background-image: linear-gradient(to right, rgba(#734c33, .5) 0%, rgba(#876242, .5) 20%, rgba(#e2c98f, .5) 50%, rgba(#a3875e, .5) 68%, rgba(#816344, .5) 70%, rgba(#634026, .5) 85%, rgba(#f5c955, .5) 100%)
 body
-	font-family: 'Calibri Light'  
+	// +light
+	font-family: "Calibri Light", "Helvetica", sans-serif 
 	font-size: 14px
 	line-height: 1.4
 
@@ -109,7 +79,8 @@ a
 	+clr
 .logo
 	+hide-text
-	+s(logo)
+	width: 175px
+	height: 45px   
 	display: inline-block
 .title-wrap
 	position: relative

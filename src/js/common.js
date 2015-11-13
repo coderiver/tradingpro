@@ -15,5 +15,4 @@ $(document).ready(function() {
 	//     scrollFixedElements()
 	// });
 
-	console.log($('body').html());
 });
