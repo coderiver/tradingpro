@@ -1,11 +1,52 @@
 .article	
-	margin: 0 -40px
+	margin: 0 -25px
+	font-size: 0
 	+clr
 	&__col
-		float: left
+		display: inline-block
 		width: 50% 
-		padding: 0 40px 
+		padding: 0 25px 
+		font-size: 14px 
+		vertical-align: top
+		margin-bottom: 30px 
 	p
 		color: #4a2005
 		font-size: 20px
 		line-height: 1.1 
+.cite
+	background: #F5E8C8 
+	padding: 50px 0 
+	margin-top: 30px 
+	&__text
+		text-align: center
+		color: #4a2005
+		width: 800px
+		margin: 0 auto  
+		p
+			font-size: 20px 
+	&__header
+		font-size: 30px 
+		margin-bottom: 10px 
+.man
+	.container
+		position: relative
+		+clr
+	&__img,
+	&__text
+		width: 50%
+	&__img
+		position: absolute
+		left: 0
+		top: -15px
+		bottom: 0
+		text-align: center
+	&__text
+		color: #4a2005
+		font-size: 20px 
+		float: right
+		padding: 110px 0 165px 
+		line-height: 1.2 
+		font-weight: 100 
+		strong
+			font-weight: bold 
+		
