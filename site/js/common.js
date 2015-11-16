@@ -14,5 +14,5 @@ $(document).ready(function() {
 	// $(window).scroll(function(){
 	//     scrollFixedElements()
 	// });
-
+	// $('.flexmenu').menuFlex();
 });

@@ -63,10 +63,14 @@
 	background-image: linear-gradient(to right, #734c33 0%, #876242 20%, #e2c98f 50%, #a3875e 68%, #816344 70%, #634026 85%, #f5c955 100%)
 %gradient-line_op
 	background-image: linear-gradient(to right, rgba(#734c33, .5) 0%, rgba(#876242, .5) 20%, rgba(#e2c98f, .5) 50%, rgba(#a3875e, .5) 68%, rgba(#816344, .5) 70%, rgba(#634026, .5) 85%, rgba(#f5c955, .5) 100%)
+html
+	font-size: 62.5%
+	+r(1050)
+		font-size: 56% 
 body
 	// +light
 	font-family: "Calibri Light", "Helvetica", sans-serif 
-	font-size: 14px
+	font-size: 2rem
 	line-height: 1.4
 
 a
@@ -74,7 +78,7 @@ a
 // common blocks
 .container
 	max-width: 1200px
-	padding: 0 30px  
+	padding: 0 3rem  
 	margin: 0 auto 
 	+clr
 .logo
@@ -89,20 +93,20 @@ a
 
 .title
 	color: #b3810a
-	font-size: 36px
+	font-size: 3.6rem
 	text-transform: uppercase
 	position: relative
 	display: inline-block
 	padding-bottom: 3px 
-	margin: 20px 0 
+	margin: 2rem 0 
 	z-index: 2
 	&:after
 		content: ''
 		position: absolute
 		bottom: 0
 		left: 48%
-		margin-left: -40px 
-		width: 80px
+		margin-left: -4rem 
+		width: 8rem
 		height: 2px
 		background: #B3810A 
 	&_left
@@ -114,8 +118,8 @@ a
 			background: #fff 
 			display: inline-block
 			position: relative
-			padding: 0 30px
-			margin-left: -30px 
+			padding: 0 3rem
+			margin-left: -3rem 
 			&:before
 				content: ''
 				position: absolute
@@ -131,30 +135,30 @@ a
 .title-md
 	position: relative
 	color: #b3810a
-	font-size: 24px
+	font-size: 2.4rem
 	font-weight: 100
-	margin-bottom: 20px  
+	margin-bottom: 2rem  
 	span
-		font-size: 36px 
+		font-size: 3.6rem 
 	&:after
 		content: ''
-		width: 80px
+		width: 8rem
 		height: 2px
 		position: absolute
 		left: 0
 		bottom: 0   
 		background: #b3810a 
 .title-sm
-	font-size: 20px
+	font-size: 2rem
 	font-weight: bold
 	color: #4a2005  
-	margin: 40px 0 
+	margin: 4rem 0 
 
 .btn
-	padding: 14px 38px 8px 
+	padding: 1.4rem 3.8rem 1.1rem 
 	border-radius: 5px
 	+black
-	font-size: 14px
+	font-size: 1.4rem
 	line-height: 1
 	display: inline-block
 	border: 1px solid #cebe93
@@ -167,8 +171,8 @@ a
 	&:hover
 		background: linear-gradient( to top, darken(#c6bb9e, 5%) 0%, darken(#eee2c0, 5%) 100%)
 	&_lg
-		font-size: 18px 
-		padding: 16px 20px 14px 
+		font-size: 1.8rem 
+		padding: 1.6rem 2rem 1.4rem 
 		text-align: center
 	&_yellow
 		border: 1px solid #ffed8c
@@ -184,13 +188,13 @@ a
 
 .btn-action
 	position: relative
-	padding: 14px 13px 8px 
+	padding: 1.4rem 1.3rem 0.8rem 
 	border: 1px solid #f6e6b8
 	+black
 	color: #98917e
 	text-shadow: 0px 1px 0px rgba(255, 238, 186, 0.73)
 	display: inline-block
-	font-size: 14px 
+	font-size: 1.4rem 
 	border-radius: 5px 
 	background: linear-gradient( to top, #c7bc9f 0%, #eee1bf 100%)
 	box-shadow: 0px 2px 3px 0px #716e67,inset 0px 1px 0px 0px #fffdde, inset 1px 0px 0px 0px #fffdde
@@ -199,19 +203,19 @@ a
 	i
 		display: inline-block
 		vertical-align: middle
-		margin-right: 15px
+		margin-right: 1.5rem
 	&:hover
 		background: linear-gradient( to top, darken(#c7bc9f, 5%) 0%, darken(#eee1bf, 5%) 100%)
 
 .page-title
-	font-size: 78px
+	font-size: 7.8rem
 	color: #6b482a
 	text-align: center
 	line-height: 1
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5)
 .nav
-	height: 60px
-	line-height: 60px
+	height: 6rem
+	line-height: 6rem
 	background: #936645  
 	position: relative
 	&:before
@@ -232,21 +236,33 @@ a
 		@extend %gradient-line
 
 	&__list
-		+justify
+		position: relative
+		// +justify
+		text-align: left
 		li
-			// margin-right: 30px 
-			font-size: 18px
-			line-height: 60px  
+			// margin-right: 3rem 
+			font-size: 1.8rem
+			line-height: 6rem  
 			display: inline-block
 		a
 			color: #fff
-			font-size: 18px 
+			font-size: 1.8rem 
+			padding: 0 10px 
 			text-transform: uppercase
 			+tr(color .3s)
 			&:hover, &.is-active
 				color: #ffcd48
 			&.is-active
 				font-weight: bold 
+		// +r(1120)
+		// 	text-align: left
+		// 	li
+		// 		a
+		// 			padding: 0 10px 
+		.menuFlexBtnText 
+			position: absolute
+			right: 0
+			top: 0
 
 
 	
