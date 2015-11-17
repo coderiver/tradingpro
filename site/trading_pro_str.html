@@ -36,8 +36,7 @@
 			</div>
 		</nav>
 		<div class="header__button">
-		<button class="btn btn_lg btn_yellow">ЗАРЕГИСТРИРОВАТЬСЯ</button>
-			
+			<button class="btn btn_lg btn_yellow js-show-popup" data-popup="js-register-popup">ЗАРЕГИСТРИРОВАТЬСЯ</button>
 		</div>
 	</header>
 	<div class="title-wrap">
@@ -77,7 +76,7 @@
 	</div>
 	<div class="cite">
 		<div class="container">
-			<div class="cite__text">
+			<div class="cite__text cite__text_sm">
 				<div class="cite__header">Минимальная сумма инвестирования – от 10 000 USD.</div>
 				<p>Вознаграждение Управляющего зависит от суммы инвестирования, <br>
 но не превышает 35% от величины чистой прибыли, полученной на счете. </p>
@@ -112,7 +111,50 @@
 	</div>
 </div>
 <!-- END out-->
-
+<div class="popup js-popup js-register-popup">
+	<div class="popup__in js-popup-in">
+		<div class="popup__header">Открыть  счет</div>
+		<div class="popup__body">
+			<div class="popup__form">
+				<form action="#">
+					<div class="field">
+						<label>Имя:</label>
+						<div class="field__input">
+							<input type="text" name="name">
+						</div>
+					</div>
+					<div class="field">
+						<label>Фамилия:</label>
+						<div class="field__input">
+							<input type="text" name="surname">
+						</div>
+					</div>
+					<div class="field">
+						<label>Телефон:</label> 
+						<div class="field__input">
+							<input type="tel" name="phone">
+						</div>
+					</div>
+					<div class="field">
+						<label>E-mail:</label>
+						<div class="field__input">
+							<input type="email" name="email">
+						</div>
+					</div>
+					<div class="field field_checkbox">
+						<label class="checkbox">
+							<input class="checkbox__input" type="checkbox" required>
+							<span class="checkbox__text"><i class="icon-check"></i>Я принимаю условия регламентирующих документов: Декларация инвестиционного риска, Политика конфиденциальности.</span>
+						</label>
+					</div>
+					<div class="popup__formbuttton">
+						<button type="submit" class="btn btn_lg btn_yellow">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="js/app.js"></script>
 </body>
 </html>
