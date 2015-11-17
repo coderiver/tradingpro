@@ -180,6 +180,9 @@ a
 		text-shadow: 1px 1px 1px rgba(255,255,255, .3)
 		&:hover
 			background: linear-gradient( to top, darken(#ddb23e, 5%) 0%, darken(#f4c64c, 5%) 100%)
+		&:active
+			background: linear-gradient( to top, #ddb23e 0%, #f4c64c 100%)
+			
 
 .btn-action
 	position: relative
@@ -208,56 +211,7 @@ a
 	text-align: center
 	line-height: 1
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5)
-.nav
-	height: 6rem
-	line-height: 6rem
-	background: #936645  
-	position: relative
-	&:before
-		content: ''
-		position: absolute
-		bottom: 100%
-		left: 0
-		right: 0
-		height: 3px  
-		@extend %gradient-line_op
-	&:after
-		content: ''
-		position: absolute
-		left: 0
-		right: 0
-		bottom: 0
-		height: 3px 
-		@extend %gradient-line
 
-	&__list
-		position: relative
-		// +justify
-		text-align: left
-		li
-			// margin-right: 3rem 
-			font-size: 1.8rem
-			line-height: 6rem  
-			display: inline-block
-		a
-			color: #fff
-			font-size: 1.8rem 
-			padding: 0 10px 
-			text-transform: uppercase
-			+tr(color .3s)
-			&:hover, &.is-active
-				color: #ffcd48
-			&.is-active
-				font-weight: bold 
-		// +r(1120)
-		// 	text-align: left
-		// 	li
-		// 		a
-		// 			padding: 0 10px 
-		.menuFlexBtnText 
-			position: absolute
-			right: 0
-			top: 0
 .popup
 	display: none
 	position: absolute
@@ -265,6 +219,8 @@ a
 	right: 0
 	top: 8rem 
 	z-index: 99 
+	+r(767)
+		padding: 0 10px 
 	&__in
 		margin: 0 auto
 		font-size: 2rem 
@@ -351,15 +307,60 @@ a
 			background-repeat: no-repeat 
 			display: block
 			
+.m-nav
+	display: none
+	padding: 1rem 0 
+	+clr
+	+r(767)
+		display: block
+	&__text
+		color: #ffcd48
+		font-size: 2rem 
+		float: left
+		font-weight: bold 
+		line-height: 1
+		padding-top: 3px 
+	.humb
+		float: right
 		
-	 
-
-
-	
-
-
+.humb
+	height: 25px 
+	width: 25px 
+	position: relative
+	cursor: pointer
+	span
+		background: #ffcd48
+		height: 2px
+		display: block
+		cursor: pointer
+		position: absolute
+		top: 50%
+		margin-top: -1px  
+		left: 0
+		right: 0
+		transition: transform .25s, background .2s
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			height: 2px  
+			background: #ffcd48
+			transition: transform .25s, background .2s
 			
-  
-
-
-
+		&:before
+			top: -7px
+		&:after
+			bottom: -7px
+	&.is-active
+		span
+			background: transparent
+			&:before
+				transform: rotate(45deg)
+				top: 1px
+				height: 2px
+			&:after
+				transform: rotate(-45deg)
+				bottom: -1px
+				height: 2px
