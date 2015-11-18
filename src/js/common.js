@@ -2,8 +2,7 @@ $(document).ready(function() {
 	
 	$(document).on("click", function(){
 		$(".js-popup").hide();
-		if($(window).width() < 768) $(".js-nav").slideUp();
-		$('.js-open-menu').removeClass('is-active');
+		$('.js-open-menu .humb').removeClass('is-active');
 	});
 	$(".js-popup-in").on("click", function(e){
 		e.stopPropagation();
@@ -24,8 +23,6 @@ $(document).ready(function() {
 	// $(window).scroll(function(){
 	//     scrollFixedElements()
 	// });
-	// $('.flexmenu').menuFlex();
-	// accordeon
 
 	//accordion
 	$('.js-open-accordion').click(function() {
@@ -46,7 +43,38 @@ $(document).ready(function() {
 
 	// show menu
 	$('.js-open-menu').on('click', function() {
-		$(this).toggleClass('is-active');
-		$('.js-nav').slideToggle();
+		$(this).find('.humb').toggleClass('is-active');
+		$('.js-nav').toggleClass('is-active');
 	});
+
+	// fixed header
+	(function() {
+		// Create a clone of the menu, right next to original.
+		$('.js-nav-main').addClass('original').clone(true).insertAfter('.js-nav-main').addClass('cloned').css('position', 'fixed').css('top', '0').css('margin-top', '0').css('z-index', '500').removeClass('original').hide();
+
+		scrollIntervalID = setInterval(stickIt, 10);
+
+		function stickIt() {
+
+		  var orgElementPos = $('.original').offset();
+		  orgElementTop = orgElementPos.top;
+
+		  if ($(window).scrollTop() >= (orgElementTop)) {
+		    // scrolled past the original position; now only show the cloned, sticky element.
+
+		    // Cloned element should always have same left position and width as original element.     
+		    orgElement = $('.original');
+		    coordsOrgElement = orgElement.offset();
+		    leftOrgElement = coordsOrgElement.left;
+		    widthOrgElement = orgElement.css('width');
+		    $('.cloned').css('left', leftOrgElement + 'px').css('top', 0).css('width', widthOrgElement).show();
+		    $('.original').css('visibility', 'hidden');
+		  } else {
+		    // not scrolled past the menu; only show the original menu.
+		    $('.cloned').hide();
+		    $('.original').css('visibility', 'visible');
+		  }
+		}
+	})();
+
 });

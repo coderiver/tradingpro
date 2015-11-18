@@ -211,7 +211,7 @@ a
 	color: #6b482a
 	text-align: center
 	line-height: 1
-	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5)
+	text-shadow: 0px 0px 8px rgba(255, 255, 255, 1), 0px 0px 8px rgba(255, 255, 255, .3)
 
 .popup
 	display: none
@@ -314,19 +314,30 @@ a
 	+clr
 	+r(767)
 		display: block
+	&__in
+		float: right
+		cursor: pointer
+		padding-top: .7rem
+	&__btn
+		float: left
+		.btn-action
+			padding-top: 1rem
+			padding-bottom: .6rem  
 	&__text
 		color: #ffcd48
 		font-size: 2rem 
-		float: left
+		display: inline-block
+		vertical-align: middle
 		font-weight: bold 
 		line-height: 1
-		padding-top: 3px 
+		margin-right: 10px 
 	.humb
-		float: right
+		display: inline-block
+		vertical-align: middle
 		
 .humb
 	height: 25px 
-	width: 25px 
+	width: 22px 
 	position: relative
 	cursor: pointer
 	span

@@ -3,6 +3,8 @@
 	background-position: 50% 100%
 	background-repeat: no-repeat 
 	padding-bottom: 4rem 
+	+r(767)
+		padding-top: 7rem 
 	&__top
 		+clr
 		.logo
@@ -18,11 +20,18 @@
 				display: block
 				margin: 2rem auto 
 			.btn-action
-				margin-top: 4rem
+				display: none
 	.page-title
 		margin-top: 3rem
 	.nav
 		margin-top: 13.5rem 
+		+r(767)
+			position: fixed
+			top: 0
+			margin-top: 0
+			left: 0
+			right: 0
+			z-index: 100 
 	&__button
 		text-align: center
 		margin-top: 2.8rem 
@@ -47,7 +56,6 @@
 		bottom: 0
 		height: 3px 
 		@extend %gradient-line
-
 	&__list
 		position: relative
 		text-align: left
@@ -65,15 +73,18 @@
 			z-index: 4
 			left: 0
 			right: 0
+			&.is-active
+				display: block
 		li
 			font-size: 1.8rem
 			line-height: 1
 			padding: 2rem 0 
 			display: inline-block
 			vertical-align: top
+			+tr(padding .25s)
 			+r(767)
 				width: 100%
-				 
+		 
 		a
 			color: #fff
 			font-size: 1.8rem 
@@ -84,3 +95,7 @@
 				color: #ffcd48
 			&.is-active
 				font-weight: bold
+	&.cloned
+		.nav__list
+			li
+				padding: 1.3rem 0	
