@@ -3,6 +3,7 @@ $(document).ready(function() {
 	$(document).on("click", function(){
 		$(".js-popup").hide();
 		$('.js-open-menu .humb').removeClass('is-active');
+		$('.js-nav').removeClass('is-active');
 	});
 	$(".js-popup-in").on("click", function(e){
 		e.stopPropagation();
